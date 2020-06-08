@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 import pylab as plt
 
 #Importamos modulo especifico de nuestro proyecto
-from model import m1
+from model import m1,m2
 
 def ajusto(m,x,y):
 	"""Ajuste de datos utilizando modelo m"""
@@ -15,7 +15,7 @@ def grafica(x,y, modelo, pars):
 	"""Esta funcion realiza un grafico y el grafico de una funcion ajustada con los mismos datos
 	x: x-data de la forma de array de numpy
 	y: y-data de la forma de array de numpy
-	model: modelo utilizado para ajustar los datos
+	modelo: modelo utilizado para ajustar los datos
 	pars: parametros ajustados del modelo"""
 
 	plt.grid()
