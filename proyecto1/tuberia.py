@@ -5,12 +5,18 @@ import sys
 import lectura 
 import ajuste 
 #Importamos de forma diferente para claridad conceptual (se puede importar un modulo de diferentes formas)
-from model import m1
+from model import m1,m2
 
 archivo = sys.argv[1]
+model_number = sys.argv[2]
+
+if model_number == 'm1':
+	m = m1
+elif model_number == 'm2':
+	m = m2
 
 t, fuente = lectura.leo(archivo)
 data_norm = lectura.normalizo(fuente)
-pars = ajuste.ajusto(m1,t,data_norm)
+pars = ajuste.ajusto(m,t,data_norm)
 
-ajuste.grafica(t, data_norm, m1,pars)
+ajuste.grafica(t, data_norm, m, pars)

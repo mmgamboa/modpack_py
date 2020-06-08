@@ -11,7 +11,7 @@ def ajusto(m,x,y):
 	popt, _ = curve_fit(m, x, y)
 	return popt
 
-def grafica(x,y, model, pars):
+def grafica(x,y, modelo, pars):
 	"""Esta funcion realiza un grafico y el grafico de una funcion ajustada con los mismos datos
 	x: x-data de la forma de array de numpy
 	y: y-data de la forma de array de numpy
@@ -20,8 +20,8 @@ def grafica(x,y, model, pars):
 
 	plt.grid()
 	plt.xlabel('t[seg]')
-	plt.ylabel('Data[ua]')
+	plt.ylabel('I[un. arb.]')
 	plt.plot(x, y, 'ko',alpha=0.5, label = 'Datos')
-	plt.plot(x, model(x, *pars), 'r-', label='Ajuste')
+	plt.plot(x, modelo(x, *pars), 'r-', label='Ajuste')
 	plt.legend(loc='best')
 	plt.show()
