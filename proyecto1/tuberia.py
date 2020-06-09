@@ -1,5 +1,6 @@
 #Importamos modulos generales
 import sys
+import numpy as np
 
 #importamos modulos especificos de nuestro proyecto
 import lectura 
@@ -12,6 +13,9 @@ model_number = sys.argv[2]
 
 t, fuente = lectura.leo(archivo)
 data_norm = lectura.normalizo(fuente)
-pars = ajuste.ajusto(t,data_norm, model_number)
+
+#Defino valores semilla para el ajuste
+p0 = np.array([1,10,1])
+pars = ajuste.ajusto(t,data_norm, model_number, p0)
 
 ajuste.grafica(model_number,t, data_norm, pars)

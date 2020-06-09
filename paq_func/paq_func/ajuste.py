@@ -6,12 +6,12 @@ import pylab as plt
 #Importamos modulo especifico de nuestro proyecto
 from paq_func import model
 
-def ajusto(x,y,m):
-	"""Ajuste de datos utilizando modelo m"""
+def ajusto(x,y,m,p0):
+	"""Ajuste de datos utilizando modelo m y valores semilla en p0"""
 	if m=='m1':
-		popt, _ = curve_fit(model.m1, x, y)
+		popt, _ = curve_fit(model.m1, x, y, p0)
 	elif m == 'm2':
-		popt, _ = curve_fit(model.m2, x, y)
+		popt, _ = curve_fit(model.m2, x, y, p0)
 
 	return popt
 
