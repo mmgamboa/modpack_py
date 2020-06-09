@@ -1,0 +1,9 @@
+setup.py
+paq_func/__init__.py
+paq_func/ajuste.py
+paq_func/lectura.py
+paq_func/model.py
+paq_func.egg-info/PKG-INFO
+paq_func.egg-info/SOURCES.txt
+paq_func.egg-info/dependency_links.txt
+paq_func.egg-info/top_level.txt

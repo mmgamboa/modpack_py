@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: paq-func
+Version: 0.56
+Summary: Ejemplo de como hacer un paquete (una de las variantes que existen de como hacerlo)
+Home-page: https://github.com/mmgamboa/modpack_py
+Author: del Palacio, S.; Gamboa Lerena, M. M.
+Author-email: martingamboa2@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: ajuste,lectura,model
+Platform: UNKNOWN
