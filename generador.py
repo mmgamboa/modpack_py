@@ -14,6 +14,7 @@ t = np.linspace(0,100, 200)
 if proy == '1':
     #gaussiana con media en un valor random entre 30 y 70, y varianza = 5
     datos = 1000*stats.norm.pdf(t,np.random.randint(30,70),5 )
+    datos += np.random.random(t.shape)
 
 elif proy == '2':
     #sinusoide de amplitud A y periodo P + errores aleatorios de amplitud 1
