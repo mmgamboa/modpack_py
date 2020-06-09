@@ -10,13 +10,8 @@ from model import m1,m2
 archivo = sys.argv[1]
 model_number = sys.argv[2]
 
-if model_number == 'm1':
-	m = m1
-elif model_number == 'm2':
-	m = m2
-
 t, fuente = lectura.leo(archivo)
 data_norm = lectura.normalizo(fuente)
-pars = ajuste.ajusto(m,t,data_norm)
+pars = ajuste.ajusto(t,data_norm, model_number)
 
-ajuste.grafica(t, data_norm, m, pars)
+ajuste.grafica(model_number,t, data_norm, pars)
